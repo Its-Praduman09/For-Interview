@@ -22,12 +22,18 @@
   },
   "homepage": "https://github.com/Its-Praduman09/For-Interview#readme",
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
-    "fastify": "^5.8.5"
+    "fastify": "^5.8.5",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/pg": "^8.20.0",
+    "bcrypt": "^6.0.0",
+    "drizzle-kit": "^0.31.10",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.21.0",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3"
