@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Its-Praduman09/For-Interview#readme",
   "dependencies": {
+    "@fastify/rate-limit": "^10.3.0",
     "@types/jsonwebtoken": "^9.0.10",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",

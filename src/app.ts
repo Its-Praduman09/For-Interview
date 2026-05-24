@@ -1,3 +1,4 @@
+import rateLimit from "@fastify/rate-limit";
 import dotenv from "dotenv";
 import fastify from "fastify";
 import { db } from "./db/index.js";
@@ -13,6 +14,10 @@ const PORT = Number(process.env.PORT) || 4000;
 
 const start = async () => {
   try {
+    app.register(rateLimit, {
+      max: 100,
+      timeWindow: '1 minute'
+    });
     app.register(authRoutes, { prefix: "/api/auth" });
     app.register(userRoutes, { prefix: "/api/users" });
     await db.execute("SELECT 1")

@@ -50,7 +50,7 @@ export const login = async (request: FastifyRequest, reply: FastifyReply) => {
     const passwordToCompare = existingUser?.password ?? DUMMY_PASSWORD_HASH;
     const passwordMatch = await bcrypt.compare(validateBody.password, passwordToCompare);
     if (!existingUser || !passwordMatch) {
-      return reply.code(401).send({ error: "Invalid email or password" });
+      return reply.code(401).send({ success: false, error: "Invalid email or password" });
     }
     const { password, ...safeUser } = existingUser;
     const token = generateToken({
